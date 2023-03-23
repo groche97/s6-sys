@@ -1,0 +1,2 @@
+#!/bin/execlineb -P
+foreground { systemd-tmpfiles --create --remove --boot --exclude-prefix=/dev }

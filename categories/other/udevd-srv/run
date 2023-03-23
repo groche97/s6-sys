@@ -1,3 +1,11 @@
 #!/bin/execlineb -P
+define bin_eudev /sbin/udevd
+define bin_systemd /lib/systemd/systemd-udevd
+define bin_systemd2 /usr/lib/systemd/systemd-udevd
+forx binl { $bin_eudev $bin_systemd $bin_systemd2 }
+  importas binl_inside binl
+  if { test -e ${binl_inside} }
+    define bin_final "${binl_inside}"
+
 fdmove -c 2 1
-exec /sbin/udevd --debug
+exec $bin_final --debug

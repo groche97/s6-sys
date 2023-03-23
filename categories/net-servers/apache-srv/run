@@ -1,0 +1,3 @@
+#!/bin/execlineb -P
+fdmove -c 2 1
+s6-setuidgid apache exec httpd -k start -DFOREGROUND

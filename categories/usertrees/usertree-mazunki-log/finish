@@ -1,2 +1,0 @@
-#!/bin/sh
-mv /home/mazunki/.local/logs/s6 /home/mazunki/.local/logs/s6-$(date +'%F-%T')

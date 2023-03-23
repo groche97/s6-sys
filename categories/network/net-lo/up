@@ -1,2 +1,2 @@
 #!/bin/execlineb -P
-exec /sbin/ip link set up dev lo
+exec /bin/ip link set up dev lo
